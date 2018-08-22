@@ -7,9 +7,18 @@
     padding-bottom: 10px;
 }
 
-table{
+table {
     width: auto;
+    background-color: whitesmoke;
 }
 
 
+.body{
+    background-color: gold;
+}
 
+.testing{
+    background-color: white;
+    width: 800px;
+    display: inline-block;
+}

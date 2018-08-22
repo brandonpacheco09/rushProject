@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './components/RecentClass.css';
 import './index.css';
 import App from './App';
 import {Router, browserHistory} from 'react-router';

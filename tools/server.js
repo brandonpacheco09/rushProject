@@ -1,4 +1,6 @@
 import express from 'express';
+import cors from 'cors';
+import mysql from 'mysql';
 import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
@@ -10,6 +12,27 @@ const port = 3000;
 const app = express();
 const compiler = webpack(config);
 
+
+/*const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'thetatau',
+    plugin: 'mysql_native_password'
+});
+
+connection.connect(err => {
+    if(err){
+        console.log(err);
+        return err;
+    }
+});
+
+console.log(connection);*/
+
+//app.use(cors());
+
+
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
@@ -19,6 +42,15 @@ app.use(require('webpack-hot-middleware')(compiler));
 
 app.get('*', function(req, res) {
     res.sendFile(path.join( __dirname, '../src/index.html'));
+    //res.send('hello');
+    /*connection.query('SELECT * FROM pledgeclasses', (err,results) => {
+        if(err)
+        {
+            return res.send(err);
+        }
+        else
+            return res.json({data:results});
+    });*/
 });
 
 app.listen(port, function(err) {

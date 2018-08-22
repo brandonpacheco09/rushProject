@@ -11,12 +11,12 @@
 
 .imgDiv{
     display: inline;
-    position: fixed;
+    position: absolute;
     left: 0;
 }
 
 .linksDiv{
-    position: fixed;
+    position: absolute;
     display: inline;
     right: 0;
     padding-top: 30px;
