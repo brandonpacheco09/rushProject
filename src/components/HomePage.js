@@ -1,17 +1,28 @@
 import './RecentClass.css';
 import React, {Component} from 'react';
 import Recent from './RecentClass';
+import {connect} from 'react-redux';
+import * as envAction from '../actions/envAction';
 
 /*
     Homepage component which includes everything first loading in except the header.
     We are going to run render everything through the homepage.
     I.E. we are going to use reducers and action handlers to update current page we want.
     Then based on currentPage we will display certain components.
+
+    NVM CHANGE OF PLANS. We're just gonna use the basic route system, so we can use path '/pledgeClasses' to
+    traverse through the components. 
  */
 class homePage extends Component{
 
     constructor(props){
         super(props);
+        this.props.dispatch(envAction.envAction('HOME_PAGE'));
+    }
+
+
+    componentDidUpdate(){
+        console.log(this.props.env);
     }
 
     render(){
@@ -22,8 +33,7 @@ class homePage extends Component{
         return(
             <div className="body">
                 <h2 className="title">Recent Classes</h2>
-
-                <div className="testing">
+                <div className="testing" id="border">
                     <table className="table table-hover" style={fix}>
                         <tbody>
                         <tr>
@@ -44,4 +54,11 @@ class homePage extends Component{
     }
 }
 
-export default homePage;
+function mapStateToProps(state){
+    return{
+        env: state.env
+    };
+}
+
+export default connect(mapStateToProps)(homePage);
+//export default homePage;

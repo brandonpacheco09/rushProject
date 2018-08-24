@@ -1,0 +1,8 @@
+.classTable{
+    width: 800px;
+    display: inline-block;
+}
+
+ul.react-bootstrap-table-page-btns-ul.pagination{
+    margin: 0px;
+}
