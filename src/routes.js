@@ -9,5 +9,6 @@ export default (
     <Route path="/" component={App}>
         <IndexRoute component={homePage}/>
         <Route path="/pledgeClasses" component={PledgeClasses}/>
+        <Route path="/Bids" component={PledgeClasses}/>
     </Route>
 );
