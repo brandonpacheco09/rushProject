@@ -51,27 +51,32 @@ class PledgeClasses extends Component{
                     {
                         name: 'Stephanie',
                         roll: '286',
-                        description: 'Choo choo'
+                        description: 'Choo choo',
+                        family: 'Wiley'
                     },
                     {
                         name: 'Brandon',
                         roll: '288',
-                        description: 'GOES HARD IN THE MF PAINT'
+                        description: 'black out or back out',
+                        family: 'Wiley'
                     },
                     {
                         name: 'Javi',
                         roll: '283',
-                        description: 'spooky'
+                        description: 'blaZZZeee',
+                        family: 'Wiley'
                     },
                     {
                         name: 'Angel',
                         roll: '289',
-                        description: 'who is this guy'
+                        description: 'who is this guy',
+                        family: 'Chi'
                     },
                     {
                         name: 'Ben',
                         roll: '285',
-                        description: 'daddy'
+                        description: 'daddy',
+                        family: 'Rosie'
                     }]
             }
         ];

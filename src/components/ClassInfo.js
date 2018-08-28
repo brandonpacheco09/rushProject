@@ -14,6 +14,7 @@ class ClassInfo extends Component{
                 <td>{props.name}</td>
                 <td></td>
                 <td>{props.description}</td>
+                <td>{props.family}</td>
             </tr>
         );
     }
@@ -29,6 +30,7 @@ class ClassInfo extends Component{
                       <th className="col-sm-2">Name</th>
                       <th className="col-sm-4">Images</th>
                       <th className="col-sm-4">Description</th>
+                      <th className='col-sm-4'>Family Line</th>
                   </tr>
                   </thead>
                   <tbody>
