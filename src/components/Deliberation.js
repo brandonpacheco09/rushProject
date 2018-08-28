@@ -15,15 +15,59 @@ class Deliberation extends Component{
 
           /* TEMPORARY DATA TO BE REPLACED BY DATA FROM db.js */
           people: [
-            "Bro",
-            "Bro-ham",
-            "Brofessor",
-            "Brotato Chip",
-            "Chairman of the Broad",
-            "Google Brome",
-            "Brozilla FireFox",
-            "Bronana",
-            "Honeynut Cheeribro"
+            {
+              name: "Bro",
+              major: "C0mpUt3R s(13Nc3",
+              expectedGradutation: "Spring 2019"
+            },
+
+            {
+              name: "Bro-ham",
+              major: "Mech Engnineering (not Mechanical)",
+              expectedGradutation: "Fall 2020"
+            },
+
+            {
+              name: "Brofessor",
+              major: "Hypothesis Science/Engineering",
+              expectedGradutation: "Fall 2019"
+            },
+
+            {
+              name: "Brotato Chip",
+              major: "EEEEEEEEEEEE",
+              expectedGradutation: "Fall 3018"
+            },
+
+            {
+              name: "Chairman of the Broad",
+              major: "Chimicil Inginiiring",
+              expectedGradutation: "Fall 2018"
+            },
+
+            {
+              name: "Google Brome",
+              major: "Biyemee",
+              expectedGradutation: "Spring 2017"
+            },
+
+            {
+              name: "Brozilla FireFox",
+              major: "Air-In-Space (Basically Mechanical) Engineering",
+              expectedGradutation: "Spring 2020"
+            },
+
+            {
+              name: "Bronana",
+              major: "Lame Computer Systems",
+              expectedGradutation: "Fall 2022"
+            },
+
+            {
+              name: "Honeynut Cheeribro",
+              major: "Communications",
+              expectedGradutation: "Fall 2022"
+            }
           ]
         };
     }
@@ -87,7 +131,9 @@ class Deliberation extends Component{
           <form onSubmit={ this.preventSubmit.bind(this) }>
             <div>
               <h2>Rushee No. { this.state.personIndex }</h2>
-              <h3>Name: { this.state.people[this.state.personIndex] }</h3>
+              <h3>Name: { this.state.people[this.state.personIndex].name }</h3>
+              <h3>Major: {this.state.people[this.state.personIndex].major }</h3>
+              <h3>Expected Graduation Year: { this.state.people[this.state.personIndex].expectedGradutation }</h3>
               { this.createPreviousButton() /* Generate a Back button on condition */ }
               { this.createNextButton()     /* Generate a Next button on condition */ }
             </div>
