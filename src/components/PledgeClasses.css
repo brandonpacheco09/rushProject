@@ -20,3 +20,7 @@ table.table.table-bordered.table-hover {
 div.react-bs-container-header.table-header-wrapper{
     background-color: whitesmoke;
 }
+
+tbody{
+    cursor: pointer;
+}
