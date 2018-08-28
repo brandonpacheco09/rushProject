@@ -1,8 +1,22 @@
 .classTable{
     width: 800px;
     display: inline-block;
+    background-color: gold;
+    margin-top: 20px;
 }
 
 ul.react-bootstrap-table-page-btns-ul.pagination{
     margin: 0px;
+}
+
+.App{
+    background-color: gold;
+}
+
+table.table.table-bordered.table-hover {
+    background-color: white;
+}
+
+div.react-bs-container-header.table-header-wrapper{
+    background-color: whitesmoke;
 }

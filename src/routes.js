@@ -4,6 +4,7 @@ import App from './App';
 import homePage from './components/HomePage';
 import PledgeClasses from './components/PledgeClasses';
 
+
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={homePage}/>

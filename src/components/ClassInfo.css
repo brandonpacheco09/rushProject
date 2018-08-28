@@ -1,0 +1,8 @@
+.tablehead {
+    background-color: maroon;
+    color: white;
+}
+
+table.table.table-bordered{
+    background-color: whitesmoke;
+}

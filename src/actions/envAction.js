@@ -1,3 +1,3 @@
-export function envAction(page){
-    return {type: 'PAGE_CHANGE', page}
+export function envAction(pledgeClass, marshal, pledges = []){
+    return {type: 'PAGE_CHANGE', pledgeClass, marshal, pledges}
 }
