@@ -8,68 +8,24 @@ const NEXT_BTN_NAME = "Next >";
 
 class Deliberation extends Component{
     /* Constructor */
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
           personIndex: 0,
-
-          /* TEMPORARY DATA TO BE REPLACED BY DATA FROM db.js */
-          people: [
-            {
-              name: "Bro",
-              major: "C0mpUt3R s(13Nc3",
-              expectedGradutation: "Spring 2019"
-            },
-
-            {
-              name: "Bro-ham",
-              major: "Mech Engnineering (not Mechanical)",
-              expectedGradutation: "Fall 2020"
-            },
-
-            {
-              name: "Brofessor",
-              major: "Hypothesis Science/Engineering",
-              expectedGradutation: "Fall 2019"
-            },
-
-            {
-              name: "Brotato Chip",
-              major: "EEEEEEEEEEEE",
-              expectedGradutation: "Fall 3018"
-            },
-
-            {
-              name: "Chairman of the Broad",
-              major: "Chimicil Inginiiring",
-              expectedGradutation: "Fall 2018"
-            },
-
-            {
-              name: "Google Brome",
-              major: "Biyemee",
-              expectedGradutation: "Spring 2017"
-            },
-
-            {
-              name: "Brozilla FireFox",
-              major: "Air-In-Space (Basically Mechanical) Engineering",
-              expectedGradutation: "Spring 2020"
-            },
-
-            {
-              name: "Bronana",
-              major: "Lame Computer Systems",
-              expectedGradutation: "Fall 2022"
-            },
-
-            {
-              name: "Honeynut Cheeribro",
-              major: "Communications",
-              expectedGradutation: "Fall 2022"
-            }
-          ]
+          people: null
         };
+    }
+
+    /* React event handlers */
+    componentDidMount() { /* Fetch rushees from the database */
+      fetch("/api/database")
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ people: data.people }, () => {
+            console.log("People added:");
+            console.log(this.state.people);
+          });
+        });
     }
 
     /* Event Handlers */

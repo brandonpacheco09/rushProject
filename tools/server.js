@@ -5,12 +5,18 @@ import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
 import open from 'open';
+import database from "./db";
 
 /* eslint-disable no-console */
 
 const port = 3000;
 const app = express();
 const compiler = webpack(config);
+
+/* Fetch the database */
+app.get("/api/database", (req, res) => {
+  res.json(database);
+});
 
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
